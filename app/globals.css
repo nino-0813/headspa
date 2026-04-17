@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+:root {
+  --color-night: #120730;
+  --color-deep-purple: #1e0f55;
+  --color-mid-purple: #2d1b6b;
+  --color-gold: #c9a84c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #1a1a2e;
+  background: #ffffff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hero stars animation */
+.stars-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle var(--duration, 3s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+  opacity: 0;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0; }
+  50% { opacity: var(--opacity, 0.8); }
+}
+
+/* Wave divider */
+.wave-top {
+  position: relative;
+}
+
+.wave-top::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: inherit;
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+
+/* Section title underline */
+.section-en-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: #8b7bc8;
+  letter-spacing: 0.1em;
+}
+
+/* Smooth image */
+img {
+  display: block;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f2fc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8b7bc8;
+  border-radius: 2px;
+}
+
+/* Line button */
+.btn-line {
+  background: #06C755;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.btn-line:hover {
+  background: #05a048;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(6, 199, 85, 0.4);
+}
+
+/* Primary button */
+.btn-primary {
+  background: linear-gradient(135deg, #2d1b6b, #4a3290);
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(45, 27, 107, 0.4);
+}
+
+/* Arch image container */
+.arch-image {
+  border-radius: 9999px 9999px 0 0;
+  overflow: hidden;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Gold sparkle */
+.sparkle::before,
+.sparkle::after {
+  content: '✦';
+  color: var(--color-gold);
+  margin: 0 8px;
+  font-size: 0.75em;
+  opacity: 0.8;
+}
+
+/* Number large */
+.service-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  font-weight: 300;
+  color: rgba(139, 123, 200, 0.3);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .service-number {
+    font-size: 7rem;
+  }
+}
