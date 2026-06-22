@@ -28,7 +28,7 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-[#120730]/95 backdrop-blur-md shadow-lg shadow-purple-900/20'
+            ? 'bg-[#162d21]/95 backdrop-blur-md shadow-lg shadow-green-900/20'
             : 'bg-transparent'
         }`}
       >
@@ -41,7 +41,7 @@ export default function Header() {
               </span>
               <span
                 className="text-[10px] md:text-xs tracking-widest"
-                style={{ fontFamily: 'Cormorant Garamond, serif', color: '#c9a84c', fontStyle: 'italic' }}
+                style={{ fontFamily: 'Cormorant Garamond, serif', color: '#94a257', fontStyle: 'italic' }}
               >
                 dry head spa
               </span>
@@ -55,7 +55,7 @@ export default function Header() {
                   href={link.href}
                   className="flex flex-col items-center text-white/90 hover:text-white transition-colors group"
                 >
-                  <span className="text-xs font-light tracking-widest group-hover:text-gold-light transition-colors" style={{ fontFamily: 'Cormorant Garamond, serif', color: 'inherit', fontSize: '0.85rem' }}>
+                  <span className="text-xs font-light tracking-widest group-hover:text-[#b3c074] transition-colors" style={{ fontFamily: 'Cormorant Garamond, serif', color: 'inherit', fontSize: '0.85rem' }}>
                     {link.label}
                   </span>
                   <span className="text-[10px] text-white/60 tracking-wide mt-0.5">{link.sublabel}</span>
@@ -105,7 +105,7 @@ export default function Header() {
         className={`fixed inset-0 z-40 transition-all duration-500 md:hidden ${
           isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
-        style={{ background: 'linear-gradient(160deg, #120730 0%, #1e0f55 60%, #2d1b6b 100%)' }}
+        style={{ background: 'linear-gradient(160deg, #162d21 0%, #1f3d2d 60%, #29503a 100%)' }}
       >
         <div className="flex flex-col items-center justify-center h-full gap-8">
           {navLinks.map((link, i) => (

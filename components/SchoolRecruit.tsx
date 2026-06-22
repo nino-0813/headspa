@@ -20,7 +20,7 @@ export default function SchoolRecruit() {
   return (
     <section
       className="py-14 px-4"
-      style={{ background: 'linear-gradient(180deg, #d8e8f5 0%, #c8dff0 100%)' }}
+      style={{ background: 'linear-gradient(180deg, #e3efe6 0%, #cfe2d4 100%)' }}
     >
       <div className="max-w-3xl mx-auto">
         <div className="grid grid-cols-2 gap-4 md:gap-6">
@@ -50,7 +50,7 @@ export default function SchoolRecruit() {
                   style={{
                     fontFamily: 'Cormorant Garamond, serif',
                     fontStyle: 'italic',
-                    color: '#8b7bc8',
+                    color: '#5f9670',
                     fontSize: '0.9rem',
                   }}
                 >
@@ -62,7 +62,7 @@ export default function SchoolRecruit() {
               <Link
                 href={item.href}
                 className="mx-auto block px-8 py-2.5 rounded-full border text-center text-sm tracking-wider transition-all duration-300 hover:bg-white"
-                style={{ borderColor: '#2d1b6b', color: '#2d1b6b' }}
+                style={{ borderColor: '#29503a', color: '#29503a' }}
               >
                 詳しくはこちら ›
               </Link>

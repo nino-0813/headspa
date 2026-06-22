@@ -8,7 +8,7 @@ export default function Hero() {
     <>
       {/* Badge */}
       <div className="mb-4 md:mb-6 flex items-center gap-2">
-        <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full ring-2 ring-[#c9a84c]/80">
+        <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full ring-2 ring-[#94a257]/80">
           <Image
             src="/images/badge-customer-satisfaction-no1.png"
             alt="顧客満足度 第1位"
@@ -26,10 +26,10 @@ export default function Hero() {
       {/* Catchcopy */}
       <h1 className="font-serif font-semibold text-white leading-snug mb-4 drop-shadow-[0_2px_16px_rgba(0,0,0,0.9)] md:drop-shadow-none">
         <span className="block text-2xl md:text-4xl lg:text-5xl font-light tracking-wider mb-2">
-          辛さゼロの爽快感
+          頭が軽くなると、
         </span>
-        <span className="block text-xl md:text-3xl lg:text-4xl font-light tracking-wider">
-          あなた仕様のオンリーワン・ケア
+        <span className="block text-2xl md:text-4xl lg:text-5xl font-light tracking-wider">
+          本来の私が戻ってくる。
         </span>
       </h1>
 
@@ -46,7 +46,7 @@ export default function Hero() {
         </p>
         <p
           className="mt-1 text-sm tracking-widest drop-shadow-[0_1px_8px_rgba(0,0,0,0.8)] md:drop-shadow-none"
-          style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', color: '#c9a84c' }}
+          style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', color: '#94a257' }}
         >
           dry head spa
         </p>
@@ -57,9 +57,9 @@ export default function Hero() {
         href="#reserve"
         className="inline-flex items-center gap-2 px-10 py-4 rounded-full text-white text-sm md:text-base tracking-widest font-medium transition-all duration-300 hover:-translate-y-0.5"
         style={{
-          background: 'linear-gradient(135deg, #2d1b6b, #4a3290)',
-          border: '1px solid rgba(201, 168, 76, 0.4)',
-          boxShadow: '0 4px 24px rgba(45, 27, 107, 0.5), inset 0 1px 0 rgba(255,255,255,0.1)',
+          background: 'linear-gradient(135deg, #29503a, #3f7a55)',
+          border: '1px solid rgba(148, 162, 87, 0.4)',
+          boxShadow: '0 4px 24px rgba(41, 80, 58, 0.5), inset 0 1px 0 rgba(255,255,255,0.1)',
         }}
       >
         <span>LINE予約へ</span>
@@ -81,7 +81,7 @@ export default function Hero() {
           playsInline
         />
         <div
-          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0a0320] via-[#0a0320]/50 to-black/20"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0a1f15] via-[#0a1f15]/50 to-black/20"
           aria-hidden
         />
       </div>

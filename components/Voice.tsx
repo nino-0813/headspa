@@ -21,7 +21,7 @@ export default function Voice() {
     <section
       id="voice"
       className="py-20 md:py-28 px-4"
-      style={{ background: 'linear-gradient(180deg, #f0f4fc 0%, #e8edf8 100%)' }}
+      style={{ background: 'linear-gradient(180deg, #f0f6f1 0%, #eef4f0 100%)' }}
     >
       <div className="max-w-3xl mx-auto">
         {/* Title */}
@@ -30,7 +30,7 @@ export default function Voice() {
             お客様の声
           </h2>
           <p
-            style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', color: '#8b7bc8', fontSize: '1.1rem' }}
+            style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', color: '#5f9670', fontSize: '1.1rem' }}
           >
             Voice
           </p>
@@ -39,12 +39,12 @@ export default function Voice() {
         {/* Count */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-1">
-            <span style={{ color: '#c9a84c', fontSize: '12px' }}>✦</span>
+            <span style={{ color: '#94a257', fontSize: '12px' }}>✦</span>
             <span className="text-gray-500 text-sm tracking-widest">来店人数</span>
-            <span style={{ color: '#c9a84c', fontSize: '12px' }}>✦</span>
+            <span style={{ color: '#94a257', fontSize: '12px' }}>✦</span>
           </div>
           <div className="flex items-baseline justify-center gap-1">
-            <span style={{ color: '#c9a84c', fontSize: '10px' }}>✦</span>
+            <span style={{ color: '#94a257', fontSize: '10px' }}>✦</span>
             <span
               className="text-gray-800"
               style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '3.5rem', fontWeight: 300 }}
@@ -52,7 +52,7 @@ export default function Voice() {
               13,000
             </span>
             <span className="text-gray-800 text-2xl font-light ml-1">人</span>
-            <span style={{ color: '#c9a84c', fontSize: '10px', marginLeft: '4px' }}>✦</span>
+            <span style={{ color: '#94a257', fontSize: '10px', marginLeft: '4px' }}>✦</span>
           </div>
           <p className="text-gray-500 text-sm tracking-widest mt-1">突破</p>
         </div>
@@ -63,9 +63,9 @@ export default function Voice() {
             <div key={i}>
               {/* Divider */}
               <div className="flex items-center gap-3 mb-5">
-                <div className="flex-1 h-px bg-purple-200" />
-                <span style={{ color: '#c9a84c', fontSize: '10px' }}>✦</span>
-                <div className="flex-1 h-px bg-purple-200" />
+                <div className="flex-1 h-px bg-[#dcebdf]" />
+                <span style={{ color: '#94a257', fontSize: '10px' }}>✦</span>
+                <div className="flex-1 h-px bg-[#dcebdf]" />
               </div>
 
               <div className="flex gap-4 items-start">
@@ -73,15 +73,15 @@ export default function Voice() {
                 <div
                   className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center border"
                   style={{
-                    borderColor: 'rgba(139, 123, 200, 0.3)',
-                    background: 'rgba(139, 123, 200, 0.05)',
+                    borderColor: 'rgba(95, 150, 112, 0.3)',
+                    background: 'rgba(95, 150, 112, 0.05)',
                   }}
                 >
                   <span
                     style={{
                       fontFamily: 'Cormorant Garamond, serif',
                       fontStyle: 'italic',
-                      color: '#8b7bc8',
+                      color: '#5f9670',
                       fontSize: '1rem',
                     }}
                   >
@@ -104,9 +104,9 @@ export default function Voice() {
 
           {/* Bottom divider */}
           <div className="flex items-center gap-3 mt-5">
-            <div className="flex-1 h-px bg-purple-200" />
-            <span style={{ color: '#c9a84c', fontSize: '10px' }}>✦</span>
-            <div className="flex-1 h-px bg-purple-200" />
+            <div className="flex-1 h-px bg-[#dcebdf]" />
+            <span style={{ color: '#94a257', fontSize: '10px' }}>✦</span>
+            <div className="flex-1 h-px bg-[#dcebdf]" />
           </div>
         </div>
       </div>

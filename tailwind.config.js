@@ -8,16 +8,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'night': '#120730',
-        'deep-purple': '#1e0f55',
-        'mid-purple': '#2d1b6b',
-        'light-purple': '#4a3290',
-        'lavender': '#dde4f5',
-        'light-lavender': '#eef1fb',
-        'sky-light': '#d8e8f5',
-        'sky-pale': '#e8f2fb',
-        'gold': '#c9a84c',
-        'gold-light': '#e8d08c',
+        'night': '#162d21',
+        'deep-purple': '#1f3d2d',
+        'mid-purple': '#29503a',
+        'light-purple': '#3f7a55',
+        'lavender': '#e9f1ec',
+        'light-lavender': '#f6faf7',
+        'sky-light': '#e3efe6',
+        'sky-pale': '#f6faf7',
+        'gold': '#94a257',
+        'gold-light': '#b3c074',
       },
       fontFamily: {
         sans: ['"Noto Sans JP"', 'sans-serif'],
@@ -25,9 +25,9 @@ module.exports = {
         en: ['"Cormorant Garamond"', '"Playfair Display"', 'serif'],
       },
       backgroundImage: {
-        'hero-gradient': 'linear-gradient(160deg, #120730 0%, #1e0f55 40%, #2d1b6b 70%, #3d2a8a 100%)',
-        'purple-gradient': 'linear-gradient(135deg, #1e0f55 0%, #2d1b6b 50%, #4a3290 100%)',
-        'section-gradient': 'linear-gradient(180deg, #dde4f5 0%, #e8edf8 100%)',
+        'hero-gradient': 'linear-gradient(160deg, #162d21 0%, #1f3d2d 40%, #29503a 70%, #336447 100%)',
+        'purple-gradient': 'linear-gradient(135deg, #1f3d2d 0%, #29503a 50%, #3f7a55 100%)',
+        'section-gradient': 'linear-gradient(180deg, #e9f1ec 0%, #eef4f0 100%)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',

@@ -58,7 +58,7 @@ export default function Problem() {
     <section
       id="problem"
       className="py-20 md:py-28 px-4"
-      style={{ background: 'linear-gradient(180deg, #dde4f5 0%, #e8edf8 100%)' }}
+      style={{ background: 'linear-gradient(180deg, #e9f1ec 0%, #eef4f0 100%)' }}
     >
       <div className="max-w-4xl mx-auto">
         {/* Title */}
@@ -68,7 +68,7 @@ export default function Problem() {
           </h2>
           <p
             className="text-lg"
-            style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', color: '#8b7bc8' }}
+            style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', color: '#5f9670' }}
           >
             Problem
           </p>
@@ -99,13 +99,25 @@ export default function Problem() {
               <ul className="text-left text-gray-500 text-xs leading-relaxed space-y-1">
                 {problem.items.map((item, j) => (
                   <li key={j} className="flex gap-1">
-                    <span className="text-purple-300 flex-shrink-0">・</span>
+                    <span className="text-[#8bb695] flex-shrink-0">・</span>
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
+        </div>
+
+        {/* Worldview closer */}
+        <div className="mt-14 max-w-2xl mx-auto rounded-2xl bg-white/70 border border-[#dcebdf] px-6 py-8 md:px-10 md:py-10 text-center shadow-sm">
+          <p className="text-gray-800 text-base md:text-lg leading-relaxed font-medium">
+            その不調を、「いつものこと」と<br className="md:hidden" />我慢していませんか？
+          </p>
+          <p className="mt-4 text-gray-600 text-sm md:text-base leading-loose">
+            頭が重いまま過ごす毎日は、あなたの<span className="text-[#3f7a55] font-medium">元気・集中力・笑顔・優しさ</span>を、
+            静かにすり減らしていきます。<br className="hidden md:block" />
+            必要なのは、ごまかすことではなく、頭の奥の重さを手放すことです。
+          </p>
         </div>
       </div>
     </section>

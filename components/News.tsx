@@ -28,7 +28,7 @@ export default function News() {
             style={{
               fontFamily: 'Cormorant Garamond, serif',
               fontStyle: 'italic',
-              color: '#8b7bc8',
+              color: '#5f9670',
               fontSize: '1.1rem',
             }}
           >
@@ -58,8 +58,8 @@ export default function News() {
               <div className="p-4 bg-white">
                 {/* Author + Date */}
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center">
-                    <span className="text-purple-400 text-xs">✦</span>
+                  <div className="w-6 h-6 rounded-full bg-[#eef4f0] flex items-center justify-center">
+                    <span className="text-[#5f9670] text-xs">✦</span>
                   </div>
                   <span className="text-gray-400 text-xs">{item.author}</span>
                   <span className="text-gray-300 text-xs">{item.date}</span>

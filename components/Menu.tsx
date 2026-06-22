@@ -56,7 +56,7 @@ export default function Menu() {
       id="menu"
       className="py-20 md:py-28"
       style={{
-        background: 'linear-gradient(160deg, #1e0f55 0%, #2d1b6b 50%, #3d2a8a 100%)',
+        background: 'linear-gradient(160deg, #1f3d2d 0%, #29503a 50%, #336447 100%)',
       }}
     >
       {/* Main courses */}
@@ -77,11 +77,11 @@ export default function Menu() {
                 <div className="absolute top-3 left-1/2 -translate-x-1/2 z-10">
                   <span
                     className="inline-flex items-center gap-1 px-4 py-1 rounded-full text-xs text-white tracking-wider"
-                    style={{ background: 'rgba(201, 168, 76, 0.3)', border: '1px solid rgba(201, 168, 76, 0.5)' }}
+                    style={{ background: 'rgba(148, 162, 87, 0.3)', border: '1px solid rgba(148, 162, 87, 0.5)' }}
                   >
-                    <span style={{ color: '#c9a84c' }}>✦</span>
+                    <span style={{ color: '#94a257' }}>✦</span>
                     {course.tagBadge}
-                    <span style={{ color: '#c9a84c' }}>✦</span>
+                    <span style={{ color: '#94a257' }}>✦</span>
                   </span>
                 </div>
               )}
@@ -94,7 +94,7 @@ export default function Menu() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1e0f55]/60" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1f3d2d]/60" />
               </div>
 
               {/* Tag */}
@@ -116,7 +116,7 @@ export default function Menu() {
                 {/* Divider with stars */}
                 <div className="flex items-center gap-2 mb-3">
                   <div className="flex-1 h-px bg-white/20" />
-                  <span style={{ color: '#c9a84c', fontSize: '8px' }}>✦</span>
+                  <span style={{ color: '#94a257', fontSize: '8px' }}>✦</span>
                   <div className="flex-1 h-px bg-white/20" />
                 </div>
 
@@ -146,7 +146,7 @@ export default function Menu() {
             <p className="text-white/60 text-sm tracking-widest mb-1">ペアオススメ</p>
             <div className="flex items-center justify-center gap-3">
               <div className="h-px w-12 bg-white/20" />
-              <span style={{ color: '#c9a84c', fontSize: '10px' }}>✦</span>
+              <span style={{ color: '#94a257', fontSize: '10px' }}>✦</span>
               <div className="h-px w-12 bg-white/20" />
             </div>
           </div>

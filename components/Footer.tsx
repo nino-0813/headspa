@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer
       className="py-12 px-4 text-center"
-      style={{ background: 'linear-gradient(180deg, #c8dff0 0%, #b8d0e8 100%)' }}
+      style={{ background: 'linear-gradient(180deg, #cfe2d4 0%, #b8d4be 100%)' }}
     >
       <div className="max-w-2xl mx-auto">
         {/* Logo */}
@@ -19,7 +19,7 @@ export default function Footer() {
             style={{
               fontFamily: 'Cormorant Garamond, serif',
               fontStyle: 'italic',
-              color: '#8b7bc8',
+              color: '#5f9670',
               fontSize: '0.85rem',
               letterSpacing: '0.15em',
             }}

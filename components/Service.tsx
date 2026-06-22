@@ -36,17 +36,17 @@ export default function Service() {
     <section
       id="service"
       className="py-20 md:py-28"
-      style={{ background: 'linear-gradient(180deg, #e8edf8 0%, #dde4f5 100%)' }}
+      style={{ background: 'linear-gradient(180deg, #eef4f0 0%, #e9f1ec 100%)' }}
     >
       <div className="max-w-4xl mx-auto px-4">
         {/* Title */}
         <div className="text-center mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-gray-800 leading-relaxed mb-2">
-            極上ヘッドスパで<br />
-            お悩みを改善します
+            頭の重さを手放し、<br />
+            本来の自分を取り戻す
           </h2>
           <p
-            style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', color: '#8b7bc8', fontSize: '1.1rem' }}
+            style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', color: '#5f9670', fontSize: '1.1rem' }}
           >
             Service
           </p>
@@ -69,7 +69,7 @@ export default function Service() {
                     fontFamily: 'Cormorant Garamond, serif',
                     fontSize: '5rem',
                     fontWeight: 300,
-                    color: 'rgba(139, 123, 200, 0.25)',
+                    color: 'rgba(95, 150, 112, 0.25)',
                     lineHeight: 1,
                     left: service.reverse ? 'auto' : '-0.5rem',
                     right: service.reverse ? '-0.5rem' : 'auto',
@@ -77,7 +77,7 @@ export default function Service() {
                 >
                   {service.number}
                 </span>
-                <div className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden mx-auto border-4 border-white shadow-lg shadow-purple-100">
+                <div className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden mx-auto border-4 border-white shadow-lg shadow-green-100">
                   <Image
                     src={service.image}
                     alt={service.title}

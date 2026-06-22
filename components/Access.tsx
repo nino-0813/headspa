@@ -5,7 +5,7 @@ export default function Access() {
     <section
       id="access"
       className="py-20 md:py-28 px-4"
-      style={{ background: 'linear-gradient(180deg, #d8e8f5 0%, #e0edf8 100%)' }}
+      style={{ background: 'linear-gradient(180deg, #e3efe6 0%, #e9f1ec 100%)' }}
     >
       <div className="max-w-2xl mx-auto">
         {/* Logo & Salon name */}
@@ -20,7 +20,7 @@ export default function Access() {
             style={{
               fontFamily: 'Cormorant Garamond, serif',
               fontStyle: 'italic',
-              color: '#8b7bc8',
+              color: '#5f9670',
               fontSize: '1rem',
               letterSpacing: '0.15em',
             }}
@@ -41,7 +41,7 @@ export default function Access() {
             ].map(({ label, value }) => (
               <div key={label} className="flex gap-4 items-start">
                 <div className="flex items-center gap-1.5 flex-shrink-0 w-24">
-                  <span style={{ color: '#8b7bc8', fontSize: '10px' }}>✦</span>
+                  <span style={{ color: '#5f9670', fontSize: '10px' }}>✦</span>
                   <dt className="text-gray-500 text-sm tracking-wider">{label}</dt>
                 </div>
                 <dd className="text-gray-700 text-sm md:text-base">{value}</dd>
@@ -56,8 +56,8 @@ export default function Access() {
             href="#reserve"
             className="flex-1 flex items-center justify-center gap-2 py-4 rounded-xl text-white text-sm font-medium tracking-widest transition-all duration-300 hover:-translate-y-0.5"
             style={{
-              background: 'linear-gradient(135deg, #2d1b6b, #4a3290)',
-              boxShadow: '0 4px 15px rgba(45, 27, 107, 0.3)',
+              background: 'linear-gradient(135deg, #29503a, #3f7a55)',
+              boxShadow: '0 4px 15px rgba(41, 80, 58, 0.3)',
             }}
           >
             LINE予約へ
@@ -69,8 +69,8 @@ export default function Access() {
             rel="noopener noreferrer"
             className="flex-1 flex items-center justify-center gap-2 py-4 rounded-xl text-sm font-medium tracking-widest border transition-all duration-300 hover:bg-gray-50"
             style={{
-              borderColor: '#2d1b6b',
-              color: '#2d1b6b',
+              borderColor: '#29503a',
+              color: '#29503a',
             }}
           >
             HOT PEPPER Beauty

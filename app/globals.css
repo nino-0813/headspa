@@ -5,10 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 
 :root {
-  --color-night: #120730;
-  --color-deep-purple: #1e0f55;
-  --color-mid-purple: #2d1b6b;
-  --color-gold: #c9a84c;
+  --color-night: #162d21;
+  --color-deep-purple: #1f3d2d;
+  --color-mid-purple: #29503a;
+  --color-gold: #94a257;
 }
 
 * {
@@ -23,7 +23,7 @@ html {
 
 body {
   font-family: 'Noto Sans JP', sans-serif;
-  color: #1a1a2e;
+  color: #233029;
   background: #ffffff;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -71,7 +71,7 @@ body {
 .section-en-title {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  color: #8b7bc8;
+  color: #5f9670;
   letter-spacing: 0.1em;
 }
 
@@ -86,11 +86,11 @@ img {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f0f2fc;
+  background: #e9f1ec;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #8b7bc8;
+  background: #5f9670;
   border-radius: 2px;
 }
 
@@ -111,7 +111,7 @@ img {
 
 /* Primary button */
 .btn-primary {
-  background: linear-gradient(135deg, #2d1b6b, #4a3290);
+  background: linear-gradient(135deg, #29503a, #3f7a55);
   color: white;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -120,7 +120,7 @@ img {
 
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 20px rgba(45, 27, 107, 0.4);
+  box-shadow: 0 4px 20px rgba(41, 80, 58, 0.4);
 }
 
 /* Arch image container */
@@ -160,7 +160,7 @@ img {
   font-family: 'Cormorant Garamond', serif;
   font-size: 5rem;
   font-weight: 300;
-  color: rgba(139, 123, 200, 0.3);
+  color: rgba(95, 150, 112, 0.3);
   line-height: 1;
   letter-spacing: -0.02em;
 }
