@@ -1,12 +1,14 @@
 import Link from 'next/link'
+import SectionLogo from './SectionLogo'
 
 export default function Footer() {
   return (
     <footer
-      className="py-12 px-4 text-center"
-      style={{ background: 'linear-gradient(180deg, #cfe2d4 0%, #b8d4be 100%)' }}
+      className="relative overflow-hidden py-12 px-4 text-center bg-white border-t-4 border-[#16a34a]"
     >
-      <div className="max-w-2xl mx-auto">
+      <SectionLogo variant={2} size={240} bottom="-40px" right="-20px" rotate={12} opacity={0.28} duration={9} delay={0} pattern="a" />
+      <SectionLogo variant={1} size={170} top="-20px" left="-20px" rotate={-10} opacity={0.22} duration={8} delay={1.4} pattern="b" />
+      <div className="relative z-10 max-w-2xl mx-auto">
         {/* Logo */}
         <div className="mb-6">
           <p
@@ -19,7 +21,7 @@ export default function Footer() {
             style={{
               fontFamily: 'Cormorant Garamond, serif',
               fontStyle: 'italic',
-              color: '#5f9670',
+              color: '#16a34a',
               fontSize: '0.85rem',
               letterSpacing: '0.15em',
             }}
@@ -61,7 +63,7 @@ export default function Footer() {
         </nav>
 
         {/* Divider */}
-        <div className="h-px bg-white/40 mb-5" />
+        <div className="h-px bg-[#bbf7d0] mb-5" />
 
         {/* Copyright */}
         <p className="text-gray-400 text-xs tracking-wider">

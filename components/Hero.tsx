@@ -8,7 +8,7 @@ export default function Hero() {
     <>
       {/* Badge */}
       <div className="mb-4 md:mb-6 flex items-center gap-2">
-        <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full ring-2 ring-[#94a257]/80">
+        <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full ring-2 ring-[#22c55e]/80">
           <Image
             src="/images/badge-customer-satisfaction-no1.png"
             alt="顧客満足度 第1位"
@@ -46,7 +46,7 @@ export default function Hero() {
         </p>
         <p
           className="mt-1 text-sm tracking-widest drop-shadow-[0_1px_8px_rgba(0,0,0,0.8)] md:drop-shadow-none"
-          style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', color: '#94a257' }}
+          style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', color: '#22c55e' }}
         >
           dry head spa
         </p>
@@ -57,9 +57,9 @@ export default function Hero() {
         href="#reserve"
         className="inline-flex items-center gap-2 px-10 py-4 rounded-full text-white text-sm md:text-base tracking-widest font-medium transition-all duration-300 hover:-translate-y-0.5"
         style={{
-          background: 'linear-gradient(135deg, #29503a, #3f7a55)',
-          border: '1px solid rgba(148, 162, 87, 0.4)',
-          boxShadow: '0 4px 24px rgba(41, 80, 58, 0.5), inset 0 1px 0 rgba(255,255,255,0.1)',
+          background: 'linear-gradient(135deg, #16a34a, #22c55e)',
+          border: '1px solid rgba(34, 197, 94, 0.4)',
+          boxShadow: '0 4px 24px rgba(22, 163, 74, 0.5), inset 0 1px 0 rgba(255,255,255,0.1)',
         }}
       >
         <span>LINE予約へ</span>
@@ -74,7 +74,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <video
           className="absolute inset-0 h-full w-full object-cover object-center"
-          src="/videos/download.mp4"
+          src="/videos/hero.mp4"
           autoPlay
           loop
           muted

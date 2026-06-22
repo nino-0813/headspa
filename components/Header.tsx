@@ -28,7 +28,7 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-[#162d21]/95 backdrop-blur-md shadow-lg shadow-green-900/20'
+            ? 'bg-white/70 backdrop-blur-md border-b border-white/40 shadow-[0_2px_20px_rgba(0,0,0,0.05)]'
             : 'bg-transparent'
         }`}
       >
@@ -36,12 +36,16 @@ export default function Header() {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <Link href="#home" className="flex flex-col leading-tight">
-              <span className="font-serif text-white text-lg md:text-xl font-medium tracking-widest">
+              <span
+                className={`font-serif text-lg md:text-xl font-medium tracking-widest transition-colors duration-500 ${
+                  scrolled ? 'text-gray-800' : 'text-white'
+                }`}
+              >
                 サロン名
               </span>
               <span
                 className="text-[10px] md:text-xs tracking-widest"
-                style={{ fontFamily: 'Cormorant Garamond, serif', color: '#94a257', fontStyle: 'italic' }}
+                style={{ fontFamily: 'Cormorant Garamond, serif', color: '#16a34a', fontStyle: 'italic' }}
               >
                 dry head spa
               </span>
@@ -53,12 +57,14 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="flex flex-col items-center text-white/90 hover:text-white transition-colors group"
+                  className={`flex flex-col items-center transition-colors group ${
+                    scrolled ? 'text-gray-700' : 'text-white/90'
+                  }`}
                 >
-                  <span className="text-xs font-light tracking-widest group-hover:text-[#b3c074] transition-colors" style={{ fontFamily: 'Cormorant Garamond, serif', color: 'inherit', fontSize: '0.85rem' }}>
+                  <span className="text-xs font-light tracking-widest group-hover:text-[#16a34a] transition-colors" style={{ fontFamily: 'Cormorant Garamond, serif', color: 'inherit', fontSize: '0.85rem' }}>
                     {link.label}
                   </span>
-                  <span className="text-[10px] text-white/60 tracking-wide mt-0.5">{link.sublabel}</span>
+                  <span className={`text-[10px] tracking-wide mt-0.5 ${scrolled ? 'text-gray-400' : 'text-white/60'}`}>{link.sublabel}</span>
                 </Link>
               ))}
             </nav>
@@ -67,7 +73,11 @@ export default function Header() {
             <div className="flex items-center gap-3">
               <Link
                 href="#reserve"
-                className="hidden md:inline-flex items-center gap-1 px-5 py-2 rounded-full border border-white/50 text-white text-sm tracking-wider hover:bg-white/10 transition-all duration-300"
+                className={`hidden md:inline-flex items-center gap-1 px-5 py-2 rounded-full border text-sm tracking-wider transition-all duration-300 ${
+                  scrolled
+                    ? 'border-[#16a34a] text-[#16a34a] hover:bg-[#16a34a] hover:text-white'
+                    : 'border-white/60 text-white hover:bg-white/10'
+                }`}
               >
                 ご予約
                 <span className="text-xs">›</span>
@@ -79,21 +89,18 @@ export default function Header() {
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label="メニューを開く"
               >
-                <span
-                  className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
-                    isOpen ? 'rotate-45 translate-y-2' : ''
-                  }`}
-                />
-                <span
-                  className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
-                    isOpen ? 'opacity-0' : ''
-                  }`}
-                />
-                <span
-                  className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
-                    isOpen ? '-rotate-45 -translate-y-2' : ''
-                  }`}
-                />
+                {[0, 1, 2].map((n) => (
+                  <span
+                    key={n}
+                    className={`block w-6 h-0.5 transition-all duration-300 ${
+                      scrolled && !isOpen ? 'bg-gray-800' : 'bg-white'
+                    } ${
+                      isOpen && n === 0 ? 'rotate-45 translate-y-2' : ''
+                    } ${isOpen && n === 1 ? 'opacity-0' : ''} ${
+                      isOpen && n === 2 ? '-rotate-45 -translate-y-2' : ''
+                    }`}
+                  />
+                ))}
               </button>
             </div>
           </div>
@@ -105,7 +112,7 @@ export default function Header() {
         className={`fixed inset-0 z-40 transition-all duration-500 md:hidden ${
           isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
-        style={{ background: 'linear-gradient(160deg, #162d21 0%, #1f3d2d 60%, #29503a 100%)' }}
+        style={{ background: 'linear-gradient(160deg, #16a34a 0%, #16a34a 55%, #22c55e 100%)' }}
       >
         <div className="flex flex-col items-center justify-center h-full gap-8">
           {navLinks.map((link, i) => (

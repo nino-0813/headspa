@@ -5,10 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 
 :root {
-  --color-night: #162d21;
-  --color-deep-purple: #1f3d2d;
-  --color-mid-purple: #29503a;
-  --color-gold: #94a257;
+  --color-night: #16a34a;
+  --color-deep-purple: #15803d;
+  --color-mid-purple: #16a34a;
+  --color-gold: #22c55e;
 }
 
 * {
@@ -71,7 +71,7 @@ body {
 .section-en-title {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  color: #5f9670;
+  color: #16a34a;
   letter-spacing: 0.1em;
 }
 
@@ -86,11 +86,11 @@ img {
 }
 
 ::-webkit-scrollbar-track {
-  background: #e9f1ec;
+  background: #ffffff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #5f9670;
+  background: #16a34a;
   border-radius: 2px;
 }
 
@@ -111,7 +111,7 @@ img {
 
 /* Primary button */
 .btn-primary {
-  background: linear-gradient(135deg, #29503a, #3f7a55);
+  background: linear-gradient(135deg, #16a34a, #16a34a);
   color: white;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -120,7 +120,7 @@ img {
 
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 20px rgba(41, 80, 58, 0.4);
+  box-shadow: 0 4px 20px rgba(22, 163, 74, 0.4);
 }
 
 /* Arch image container */
@@ -160,7 +160,7 @@ img {
   font-family: 'Cormorant Garamond', serif;
   font-size: 5rem;
   font-weight: 300;
-  color: rgba(95, 150, 112, 0.3);
+  color: rgba(22, 163, 74, 0.3);
   line-height: 1;
   letter-spacing: -0.02em;
 }
@@ -168,5 +168,39 @@ img {
 @media (min-width: 768px) {
   .service-number {
     font-size: 7rem;
+  }
+}
+
+/* 蓮が水に浮かんで漂うアニメーション */
+@keyframes lotusFloatA {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  25%  { transform: translate(6px, -12px) rotate(2.5deg); }
+  50%  { transform: translate(0, -20px) rotate(0deg); }
+  75%  { transform: translate(-6px, -10px) rotate(-2.5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes lotusFloatB {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  25%  { transform: translate(-7px, -9px) rotate(-3deg); }
+  50%  { transform: translate(2px, -18px) rotate(1.5deg); }
+  75%  { transform: translate(7px, -7px) rotate(3deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.lotus-float-a {
+  animation: lotusFloatA 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.lotus-float-b {
+  animation: lotusFloatB 9s ease-in-out infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lotus-float-a,
+  .lotus-float-b {
+    animation: none;
   }
 }

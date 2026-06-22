@@ -1,13 +1,16 @@
 import Link from 'next/link'
+import SectionLogo from './SectionLogo'
 
 export default function Access() {
   return (
     <section
       id="access"
-      className="py-20 md:py-28 px-4"
-      style={{ background: 'linear-gradient(180deg, #e3efe6 0%, #e9f1ec 100%)' }}
+      className="relative overflow-hidden py-20 md:py-28 px-4"
+      style={{ background: 'linear-gradient(180deg, #ffffff 0%, #ffffff 100%)' }}
     >
-      <div className="max-w-2xl mx-auto">
+      <SectionLogo variant={1} size={320} bottom="-40px" left="-50px" rotate={-10} opacity={0.36} duration={8.5} delay={0} pattern="a" />
+      <SectionLogo variant={3} size={200} top="10px" right="-40px" rotate={14} opacity={0.28} duration={9.5} delay={1.4} pattern="b" />
+      <div className="relative z-10 max-w-2xl mx-auto">
         {/* Logo & Salon name */}
         <div className="text-center mb-8">
           <p
@@ -20,7 +23,7 @@ export default function Access() {
             style={{
               fontFamily: 'Cormorant Garamond, serif',
               fontStyle: 'italic',
-              color: '#5f9670',
+              color: '#16a34a',
               fontSize: '1rem',
               letterSpacing: '0.15em',
             }}
@@ -31,7 +34,7 @@ export default function Access() {
         </div>
 
         {/* Info */}
-        <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 md:p-8 mb-6 shadow-sm">
+        <div className="bg-white rounded-2xl p-6 md:p-8 mb-6 border border-[#bbf7d0] shadow-[0_6px_20px_rgba(22,163,74,0.08)]">
           <dl className="space-y-4">
             {[
               { label: '住所', value: '〇〇県〇〇市〇〇町0-00 〇〇ビル0F' },
@@ -41,7 +44,7 @@ export default function Access() {
             ].map(({ label, value }) => (
               <div key={label} className="flex gap-4 items-start">
                 <div className="flex items-center gap-1.5 flex-shrink-0 w-24">
-                  <span style={{ color: '#5f9670', fontSize: '10px' }}>✦</span>
+                  <span style={{ color: '#16a34a', fontSize: '10px' }}>✦</span>
                   <dt className="text-gray-500 text-sm tracking-wider">{label}</dt>
                 </div>
                 <dd className="text-gray-700 text-sm md:text-base">{value}</dd>
@@ -56,8 +59,8 @@ export default function Access() {
             href="#reserve"
             className="flex-1 flex items-center justify-center gap-2 py-4 rounded-xl text-white text-sm font-medium tracking-widest transition-all duration-300 hover:-translate-y-0.5"
             style={{
-              background: 'linear-gradient(135deg, #29503a, #3f7a55)',
-              boxShadow: '0 4px 15px rgba(41, 80, 58, 0.3)',
+              background: 'linear-gradient(135deg, #16a34a, #22c55e)',
+              boxShadow: '0 4px 15px rgba(22, 163, 74, 0.3)',
             }}
           >
             LINE予約へ
@@ -69,8 +72,8 @@ export default function Access() {
             rel="noopener noreferrer"
             className="flex-1 flex items-center justify-center gap-2 py-4 rounded-xl text-sm font-medium tracking-widest border transition-all duration-300 hover:bg-gray-50"
             style={{
-              borderColor: '#29503a',
-              color: '#29503a',
+              borderColor: '#16a34a',
+              color: '#16a34a',
             }}
           >
             HOT PEPPER Beauty

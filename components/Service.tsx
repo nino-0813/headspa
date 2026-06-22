@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import SectionLogo from './SectionLogo'
 
 const services = [
   {
@@ -35,10 +36,13 @@ export default function Service() {
   return (
     <section
       id="service"
-      className="py-20 md:py-28"
-      style={{ background: 'linear-gradient(180deg, #eef4f0 0%, #e9f1ec 100%)' }}
+      className="relative overflow-hidden py-20 md:py-28"
+      style={{ background: 'linear-gradient(180deg, #ffffff 0%, #ffffff 100%)' }}
     >
-      <div className="max-w-4xl mx-auto px-4">
+      <SectionLogo variant={2} size={520} bottom="-70px" right="-110px" rotate={18} opacity={0.3} duration={9.5} delay={0} pattern="a" />
+      <SectionLogo variant={1} size={250} top="60px" left="-60px" rotate={-14} opacity={0.3} duration={8} delay={1.4} pattern="b" />
+      <SectionLogo variant={3} size={180} top="44%" right="4%" rotate={10} opacity={0.22} duration={7.5} delay={2.8} pattern="a" />
+      <div className="relative z-10 max-w-4xl mx-auto px-4">
         {/* Title */}
         <div className="text-center mb-14">
           <h2 className="font-serif text-2xl md:text-3xl text-gray-800 leading-relaxed mb-2">
@@ -46,7 +50,7 @@ export default function Service() {
             本来の自分を取り戻す
           </h2>
           <p
-            style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', color: '#5f9670', fontSize: '1.1rem' }}
+            style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', color: '#16a34a', fontSize: '1.1rem' }}
           >
             Service
           </p>
@@ -69,7 +73,7 @@ export default function Service() {
                     fontFamily: 'Cormorant Garamond, serif',
                     fontSize: '5rem',
                     fontWeight: 300,
-                    color: 'rgba(95, 150, 112, 0.25)',
+                    color: 'rgba(22, 163, 74, 0.25)',
                     lineHeight: 1,
                     left: service.reverse ? 'auto' : '-0.5rem',
                     right: service.reverse ? '-0.5rem' : 'auto',

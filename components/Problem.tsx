@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import SectionLogo from './SectionLogo'
 
 const problems = [
   {
@@ -57,10 +58,13 @@ export default function Problem() {
   return (
     <section
       id="problem"
-      className="py-20 md:py-28 px-4"
-      style={{ background: 'linear-gradient(180deg, #e9f1ec 0%, #eef4f0 100%)' }}
+      className="relative overflow-hidden py-20 md:py-28 px-4"
+      style={{ background: 'linear-gradient(180deg, #ffffff 0%, #ffffff 100%)' }}
     >
-      <div className="max-w-4xl mx-auto">
+      <SectionLogo variant={1} size={300} top="60px" left="-40px" rotate={-16} opacity={0.38} duration={8.5} delay={0} pattern="a" />
+      <SectionLogo variant={3} size={220} top="20px" right="-40px" rotate={14} opacity={0.3} duration={10} delay={1.5} pattern="b" />
+      <SectionLogo variant={2} size={170} bottom="120px" right="8%" rotate={-8} opacity={0.24} duration={7.5} delay={3} pattern="a" />
+      <div className="relative z-10 max-w-4xl mx-auto">
         {/* Title */}
         <div className="text-center mb-12">
           <h2 className="font-serif text-2xl md:text-3xl text-gray-800 mb-2">
@@ -68,7 +72,7 @@ export default function Problem() {
           </h2>
           <p
             className="text-lg"
-            style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', color: '#5f9670' }}
+            style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', color: '#16a34a' }}
           >
             Problem
           </p>
@@ -99,7 +103,7 @@ export default function Problem() {
               <ul className="text-left text-gray-500 text-xs leading-relaxed space-y-1">
                 {problem.items.map((item, j) => (
                   <li key={j} className="flex gap-1">
-                    <span className="text-[#8bb695] flex-shrink-0">・</span>
+                    <span className="text-[#22c55e] flex-shrink-0">・</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -109,12 +113,12 @@ export default function Problem() {
         </div>
 
         {/* Worldview closer */}
-        <div className="mt-14 max-w-2xl mx-auto rounded-2xl bg-white/70 border border-[#dcebdf] px-6 py-8 md:px-10 md:py-10 text-center shadow-sm">
+        <div className="mt-14 max-w-2xl mx-auto rounded-2xl bg-white border-2 border-[#16a34a] px-6 py-8 md:px-10 md:py-10 text-center shadow-[0_8px_24px_rgba(22,163,74,0.1)]">
           <p className="text-gray-800 text-base md:text-lg leading-relaxed font-medium">
             その不調を、「いつものこと」と<br className="md:hidden" />我慢していませんか？
           </p>
           <p className="mt-4 text-gray-600 text-sm md:text-base leading-loose">
-            頭が重いまま過ごす毎日は、あなたの<span className="text-[#3f7a55] font-medium">元気・集中力・笑顔・優しさ</span>を、
+            頭が重いまま過ごす毎日は、あなたの<span className="text-[#16a34a] font-medium">元気・集中力・笑顔・優しさ</span>を、
             静かにすり減らしていきます。<br className="hidden md:block" />
             必要なのは、ごまかすことではなく、頭の奥の重さを手放すことです。
           </p>

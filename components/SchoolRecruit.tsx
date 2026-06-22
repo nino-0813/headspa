@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import SectionLogo from './SectionLogo'
 
 const items = [
   {
@@ -19,10 +20,12 @@ const items = [
 export default function SchoolRecruit() {
   return (
     <section
-      className="py-14 px-4"
-      style={{ background: 'linear-gradient(180deg, #e3efe6 0%, #cfe2d4 100%)' }}
+      className="relative overflow-hidden py-14 px-4"
+      style={{ background: 'linear-gradient(180deg, #ffffff 0%, #ffffff 100%)' }}
     >
-      <div className="max-w-3xl mx-auto">
+      <SectionLogo variant={1} size={300} top="-30px" left="-50px" rotate={8} opacity={0.3} duration={9} delay={0} pattern="a" />
+      <SectionLogo variant={3} size={200} bottom="-30px" right="-40px" rotate={-12} opacity={0.26} duration={8} delay={1.5} pattern="b" />
+      <div className="relative z-10 max-w-3xl mx-auto">
         <div className="grid grid-cols-2 gap-4 md:gap-6">
           {items.map((item, i) => (
             <div key={i} className="flex flex-col">
@@ -50,7 +53,7 @@ export default function SchoolRecruit() {
                   style={{
                     fontFamily: 'Cormorant Garamond, serif',
                     fontStyle: 'italic',
-                    color: '#5f9670',
+                    color: '#16a34a',
                     fontSize: '0.9rem',
                   }}
                 >
@@ -62,7 +65,7 @@ export default function SchoolRecruit() {
               <Link
                 href={item.href}
                 className="mx-auto block px-8 py-2.5 rounded-full border text-center text-sm tracking-wider transition-all duration-300 hover:bg-white"
-                style={{ borderColor: '#29503a', color: '#29503a' }}
+                style={{ borderColor: '#16a34a', color: '#16a34a' }}
               >
                 詳しくはこちら ›
               </Link>

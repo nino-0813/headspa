@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import SectionLogo from './SectionLogo'
 
 const newsItems = [
   {
@@ -16,9 +17,11 @@ export default function News() {
   return (
     <section
       id="news"
-      className="py-16 md:py-20 px-4 bg-white"
+      className="relative overflow-hidden py-16 md:py-20 px-4 bg-white"
     >
-      <div className="max-w-3xl mx-auto">
+      <SectionLogo variant={3} size={260} bottom="-30px" right="-30px" rotate={-12} opacity={0.3} duration={8.5} delay={0} pattern="a" />
+      <SectionLogo variant={2} size={170} top="-20px" left="-30px" rotate={14} opacity={0.24} duration={9.5} delay={1.3} pattern="b" />
+      <div className="relative z-10 max-w-3xl mx-auto">
         {/* Title */}
         <div className="text-center mb-10">
           <h2 className="font-serif text-2xl md:text-3xl text-gray-800 mb-2">
@@ -28,7 +31,7 @@ export default function News() {
             style={{
               fontFamily: 'Cormorant Garamond, serif',
               fontStyle: 'italic',
-              color: '#5f9670',
+              color: '#16a34a',
               fontSize: '1.1rem',
             }}
           >
@@ -58,8 +61,8 @@ export default function News() {
               <div className="p-4 bg-white">
                 {/* Author + Date */}
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-6 h-6 rounded-full bg-[#eef4f0] flex items-center justify-center">
-                    <span className="text-[#5f9670] text-xs">✦</span>
+                  <div className="w-6 h-6 rounded-full bg-[#ffffff] flex items-center justify-center">
+                    <span className="text-[#16a34a] text-xs">✦</span>
                   </div>
                   <span className="text-gray-400 text-xs">{item.author}</span>
                   <span className="text-gray-300 text-xs">{item.date}</span>

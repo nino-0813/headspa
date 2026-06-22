@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import SectionLogo from './SectionLogo'
 
 const courses = [
   {
@@ -54,22 +55,33 @@ export default function Menu() {
   return (
     <section
       id="menu"
-      className="py-20 md:py-28"
-      style={{
-        background: 'linear-gradient(160deg, #1f3d2d 0%, #29503a 50%, #336447 100%)',
-      }}
+      className="relative overflow-hidden py-20 md:py-28 bg-white"
     >
+      <SectionLogo variant={3} size={500} bottom="-90px" left="-90px" rotate={-8} opacity={0.32} duration={9} delay={0} pattern="a" />
+      <SectionLogo variant={2} size={240} top="40px" right="-50px" rotate={16} opacity={0.3} duration={8} delay={1} pattern="b" />
+      <SectionLogo variant={1} size={170} top="180px" left="5%" rotate={-14} opacity={0.24} duration={7} delay={2.6} pattern="a" />
+      {/* Title */}
+      <div className="relative z-10 text-center mb-12">
+        <h2 className="font-serif text-2xl md:text-3xl text-gray-800 mb-2">
+          メニュー・料金
+        </h2>
+        <p
+          style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', color: '#16a34a', fontSize: '1.1rem' }}
+        >
+          Menu
+        </p>
+      </div>
+
       {/* Main courses */}
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="relative z-10 max-w-5xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {courses.map((course) => (
             <div
               key={course.id}
-              className="relative rounded-2xl overflow-hidden flex flex-col"
+              className="relative rounded-2xl overflow-hidden flex flex-col bg-white transition-all duration-300 hover:-translate-y-1"
               style={{
-                background: 'rgba(255,255,255,0.05)',
-                border: '1px solid rgba(255,255,255,0.1)',
-                backdropFilter: 'blur(10px)',
+                border: course.tagBadge ? '2px solid #16a34a' : '1px solid #bbf7d0',
+                boxShadow: '0 6px 20px rgba(22, 163, 74, 0.08)',
               }}
             >
               {/* Popular badge */}
@@ -77,11 +89,11 @@ export default function Menu() {
                 <div className="absolute top-3 left-1/2 -translate-x-1/2 z-10">
                   <span
                     className="inline-flex items-center gap-1 px-4 py-1 rounded-full text-xs text-white tracking-wider"
-                    style={{ background: 'rgba(148, 162, 87, 0.3)', border: '1px solid rgba(148, 162, 87, 0.5)' }}
+                    style={{ background: '#16a34a' }}
                   >
-                    <span style={{ color: '#94a257' }}>✦</span>
+                    <span style={{ color: '#bbf7d0' }}>✦</span>
                     {course.tagBadge}
-                    <span style={{ color: '#94a257' }}>✦</span>
+                    <span style={{ color: '#bbf7d0' }}>✦</span>
                   </span>
                 </div>
               )}
@@ -94,34 +106,33 @@ export default function Menu() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1f3d2d]/60" />
               </div>
 
               {/* Tag */}
               <div className="px-4 pt-4 pb-1">
-                <p className="text-white/70 text-xs text-center leading-relaxed whitespace-pre-line tracking-wider">
+                <p className="text-gray-500 text-xs text-center leading-relaxed whitespace-pre-line tracking-wider">
                   {course.tag}
                 </p>
               </div>
 
               {/* Course info */}
               <div className="px-4 pb-6 text-center flex flex-col flex-1">
-                <p className="text-white text-sm font-medium tracking-wider mt-2 mb-1">
+                <p className="text-gray-800 text-sm font-medium tracking-wider mt-2 mb-1">
                   {course.courseName}
                 </p>
-                <p className="text-white/60 text-xs tracking-wider mb-4">
+                <p className="text-gray-400 text-xs tracking-wider mb-4">
                   {course.duration}
                 </p>
 
                 {/* Divider with stars */}
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="flex-1 h-px bg-white/20" />
-                  <span style={{ color: '#94a257', fontSize: '8px' }}>✦</span>
-                  <div className="flex-1 h-px bg-white/20" />
+                  <div className="flex-1 h-px bg-[#bbf7d0]" />
+                  <span style={{ color: '#22c55e', fontSize: '8px' }}>✦</span>
+                  <div className="flex-1 h-px bg-[#bbf7d0]" />
                 </div>
 
-                <p className="text-white/50 text-xs tracking-wider mb-1">{course.badge}</p>
-                <p className="text-white font-light tracking-wider mt-auto">
+                <p className="text-gray-400 text-xs tracking-wider mb-1">{course.badge}</p>
+                <p className="font-light tracking-wider mt-auto" style={{ color: '#16a34a' }}>
                   <span
                     className="text-4xl font-light"
                     style={{ fontFamily: 'Cormorant Garamond, serif' }}
@@ -131,7 +142,7 @@ export default function Menu() {
                   <span className="text-sm ml-1">円〜</span>
                 </p>
                 {course.note && (
-                  <p className="text-white/40 text-[10px] mt-2 tracking-wide leading-relaxed">
+                  <p className="text-gray-400 text-[10px] mt-2 tracking-wide leading-relaxed">
                     {course.note}
                   </p>
                 )}
@@ -143,17 +154,17 @@ export default function Menu() {
         {/* Pair section */}
         <div className="mt-16">
           <div className="text-center mb-8">
-            <p className="text-white/60 text-sm tracking-widest mb-1">ペアオススメ</p>
+            <p className="text-gray-500 text-sm tracking-widest mb-1">ペアオススメ</p>
             <div className="flex items-center justify-center gap-3">
-              <div className="h-px w-12 bg-white/20" />
-              <span style={{ color: '#94a257', fontSize: '10px' }}>✦</span>
-              <div className="h-px w-12 bg-white/20" />
+              <div className="h-px w-12 bg-[#bbf7d0]" />
+              <span style={{ color: '#22c55e', fontSize: '10px' }}>✦</span>
+              <div className="h-px w-12 bg-[#bbf7d0]" />
             </div>
           </div>
           <div className="grid grid-cols-3 gap-3 md:gap-5 max-w-2xl mx-auto">
             {pairOptions.map((item, i) => (
               <div key={i} className="flex flex-col items-center gap-2">
-                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-white/10">
+                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-[#bbf7d0]">
                   <Image
                     src={item.image}
                     alt={item.label}
@@ -162,7 +173,7 @@ export default function Menu() {
                     className="object-cover w-full h-full"
                   />
                 </div>
-                <p className="text-white/60 text-xs text-center tracking-wider">{item.label}</p>
+                <p className="text-gray-500 text-xs text-center tracking-wider">{item.label}</p>
               </div>
             ))}
           </div>

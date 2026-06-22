@@ -1,3 +1,5 @@
+import SectionLogo from './SectionLogo'
+
 const voices = [
   {
     title: '深い睡眠と目覚めに翌日驚き！',
@@ -20,17 +22,20 @@ export default function Voice() {
   return (
     <section
       id="voice"
-      className="py-20 md:py-28 px-4"
-      style={{ background: 'linear-gradient(180deg, #f0f6f1 0%, #eef4f0 100%)' }}
+      className="relative overflow-hidden py-20 md:py-28 px-4"
+      style={{ background: 'linear-gradient(180deg, #ffffff 0%, #ffffff 100%)' }}
     >
-      <div className="max-w-3xl mx-auto">
+      <SectionLogo variant={3} size={360} top="30px" right="-50px" rotate={10} opacity={0.34} duration={8.5} delay={0} pattern="a" />
+      <SectionLogo variant={2} size={220} bottom="60px" left="-40px" rotate={-12} opacity={0.3} duration={10} delay={1.6} pattern="b" />
+      <SectionLogo variant={1} size={160} top="46%" left="7%" rotate={18} opacity={0.22} duration={7} delay={3.2} pattern="a" />
+      <div className="relative z-10 max-w-3xl mx-auto">
         {/* Title */}
         <div className="text-center mb-10">
           <h2 className="font-serif text-2xl md:text-3xl text-gray-800 mb-2">
             お客様の声
           </h2>
           <p
-            style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', color: '#5f9670', fontSize: '1.1rem' }}
+            style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', color: '#16a34a', fontSize: '1.1rem' }}
           >
             Voice
           </p>
@@ -39,12 +44,12 @@ export default function Voice() {
         {/* Count */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-1">
-            <span style={{ color: '#94a257', fontSize: '12px' }}>✦</span>
+            <span style={{ color: '#22c55e', fontSize: '12px' }}>✦</span>
             <span className="text-gray-500 text-sm tracking-widest">来店人数</span>
-            <span style={{ color: '#94a257', fontSize: '12px' }}>✦</span>
+            <span style={{ color: '#22c55e', fontSize: '12px' }}>✦</span>
           </div>
           <div className="flex items-baseline justify-center gap-1">
-            <span style={{ color: '#94a257', fontSize: '10px' }}>✦</span>
+            <span style={{ color: '#22c55e', fontSize: '10px' }}>✦</span>
             <span
               className="text-gray-800"
               style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '3.5rem', fontWeight: 300 }}
@@ -52,7 +57,7 @@ export default function Voice() {
               13,000
             </span>
             <span className="text-gray-800 text-2xl font-light ml-1">人</span>
-            <span style={{ color: '#94a257', fontSize: '10px', marginLeft: '4px' }}>✦</span>
+            <span style={{ color: '#22c55e', fontSize: '10px', marginLeft: '4px' }}>✦</span>
           </div>
           <p className="text-gray-500 text-sm tracking-widest mt-1">突破</p>
         </div>
@@ -63,9 +68,9 @@ export default function Voice() {
             <div key={i}>
               {/* Divider */}
               <div className="flex items-center gap-3 mb-5">
-                <div className="flex-1 h-px bg-[#dcebdf]" />
-                <span style={{ color: '#94a257', fontSize: '10px' }}>✦</span>
-                <div className="flex-1 h-px bg-[#dcebdf]" />
+                <div className="flex-1 h-px bg-[#bbf7d0]" />
+                <span style={{ color: '#22c55e', fontSize: '10px' }}>✦</span>
+                <div className="flex-1 h-px bg-[#bbf7d0]" />
               </div>
 
               <div className="flex gap-4 items-start">
@@ -73,15 +78,15 @@ export default function Voice() {
                 <div
                   className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center border"
                   style={{
-                    borderColor: 'rgba(95, 150, 112, 0.3)',
-                    background: 'rgba(95, 150, 112, 0.05)',
+                    borderColor: 'rgba(22, 163, 74, 0.3)',
+                    background: 'rgba(22, 163, 74, 0.05)',
                   }}
                 >
                   <span
                     style={{
                       fontFamily: 'Cormorant Garamond, serif',
                       fontStyle: 'italic',
-                      color: '#5f9670',
+                      color: '#16a34a',
                       fontSize: '1rem',
                     }}
                   >
@@ -104,9 +109,9 @@ export default function Voice() {
 
           {/* Bottom divider */}
           <div className="flex items-center gap-3 mt-5">
-            <div className="flex-1 h-px bg-[#dcebdf]" />
-            <span style={{ color: '#94a257', fontSize: '10px' }}>✦</span>
-            <div className="flex-1 h-px bg-[#dcebdf]" />
+            <div className="flex-1 h-px bg-[#bbf7d0]" />
+            <span style={{ color: '#22c55e', fontSize: '10px' }}>✦</span>
+            <div className="flex-1 h-px bg-[#bbf7d0]" />
           </div>
         </div>
       </div>
